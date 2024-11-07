@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 min-h-screen text-gray-900;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply p-4 md:p-8;
+  }
+  
+  .card-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+  }
+  
+  .mobile-list-item {
+    @apply border-b border-gray-200 last:border-0 py-4;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Actualiza los estilos del calendario */
+.fc {
+  @apply h-full bg-white rounded-lg;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  @apply mb-4 px-4;
+}
+
+.fc .fc-toolbar-title {
+  @apply text-xl font-bold;
+}
+
+.fc-theme-standard td, 
+.fc-theme-standard th {
+  @apply border border-gray-200;
+}
+
+/* Estilo para fines de semana */
+.weekend-day {
+  @apply bg-gray-50 !important;
+}
+
+.fc-timegrid-slot {
+  @apply h-12;
+}
+
+.fc-timegrid-slot-label {
+  @apply text-sm text-gray-500;
+}
+
+/* Estilos para los eventos */
+.fc-event {
+  @apply cursor-pointer rounded-md border-none shadow-sm;
+}
+
+.fc-event-main {
+  @apply p-1;
+}
+
+.fc-event-title {
+  @apply font-semibold;
+}
+
+/* Estilos para los botones */
+.fc-button-primary {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 
+         transition-colors border-none focus:ring-2 focus:ring-blue-500 
+         focus:ring-offset-2 !important;
+}
+
+.fc-button-primary:disabled {
+  @apply opacity-50 cursor-not-allowed !important;
+}
+
+.fc-prev-button,
+.fc-next-button {
+  @apply !bg-gray-100 !text-gray-700 hover:!bg-gray-200;
+}
+
+.fc-today-button {
+  @apply !bg-gray-100 !text-gray-700 hover:!bg-gray-200 ml-2;
+}
+
+/* Estilos para el área de recursos (habitaciones) */
+.fc-resource-area {
+  @apply bg-gray-50;
+}
+
+.fc-resource-area .fc-datagrid-cell-main {
+  @apply text-sm font-medium text-gray-700 px-2;
+}

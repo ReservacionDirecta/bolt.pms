@@ -9,8 +9,11 @@ yarn.lock
 /coverage
 
 # next.js
-/.next/
-/out/
+.next/
+.next 2/
+out/
+build/
+dist/
 
 # production
 /build
@@ -40,3 +43,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Archivos de caché
+*.pack
+*.pack.gz
+*.hot-update.js
+*.hot-update.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
