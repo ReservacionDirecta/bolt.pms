@@ -2,6 +2,8 @@
 /node_modules
 /.pnp
 .pnp.js
+package-lock.json
+yarn.lock
 
 # testing
 /coverage
@@ -16,6 +18,12 @@
 # misc
 .DS_Store
 *.pem
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # debug
 npm-debug.log*
@@ -24,10 +32,11 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts 
+next-env.d.ts
